@@ -1,8 +1,11 @@
-tasks:
-- init: ./mvnw package -DskipTests
-  command: java -jar target/*.jar
-  name: Run PetClinic app
- 
+image:
+  file: .gitpod.dockerfile
+
+# tasks:
+# - init: ./mvnw package -DskipTests
+#   command: ls
+#   name: ls
+
 # exposed ports
 ports:
 - port: 8080
@@ -15,9 +18,9 @@ vscode:
     - vscjava.vscode-java-test
     - pivotal.vscode-spring-boot
 
-jetbrains:
-  intellij:  
-    plugins:
-      - com.haulmont.jpab
-    prebuilds:
-      version: both
+# jetbrains:
+#   intellij:  
+#     plugins:
+#       - com.haulmont.jpab
+#     prebuilds:
+#       version: both
